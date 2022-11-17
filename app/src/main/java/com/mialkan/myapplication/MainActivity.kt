@@ -101,7 +101,7 @@ fun TextFieldDatePickerWithInteractionSource(selectedDate: String?, onSelectDate
                 onSelectDate.invoke()
             }
     }*/
-    // consider using collectIsFocusedAsState to select date when talkback is active.
+    // consider using collectIsFocusedAsState for ADA compatibility.
     if (interactionSource.collectIsPressedAsState().value) {
         onSelectDate.invoke()
     }
